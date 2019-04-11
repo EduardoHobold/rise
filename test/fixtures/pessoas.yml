@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  pai: MyString
+  mae: MyString
+  cpf: MyString
+  rg: MyString
+  data_nascimento: 2019-04-11
+  endereco: one
+
+two:
+  nome: MyString
+  pai: MyString
+  mae: MyString
+  cpf: MyString
+  rg: MyString
+  data_nascimento: 2019-04-11
+  endereco: two

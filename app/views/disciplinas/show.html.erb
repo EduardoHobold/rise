@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @disciplina.nome %>
+</p>
+
+<p>
+  <strong>Carga horaria:</strong>
+  <%= @disciplina.carga_horaria %>
+</p>
+
+<p>
+  <strong>Conteudo:</strong>
+  <%= @disciplina.conteudo %>
+</p>
+
+<p>
+  <strong>Semestre:</strong>
+  <%= @disciplina.semestre %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @disciplina.curso %>
+</p>
+
+<%= link_to 'Edit', edit_disciplina_path(@disciplina) %> |
+<%= link_to 'Back', disciplinas_path %>

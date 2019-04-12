@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  carga_horaria: 1
+  conteudo: MyString
+  semestre: one
+  curso: one
+
+two:
+  nome: MyString
+  carga_horaria: 1
+  conteudo: MyString
+  semestre: two
+  curso: two

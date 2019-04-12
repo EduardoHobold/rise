@@ -26,6 +26,12 @@
     <%= form.text_field :numero %>
   </div>
 
+  <div class="field">
+    <%= form.label :cidade_id %>
+    <%= form.select :cidade_id,
+    Cidade.all.collect {|c| [c.nome + " - " + c.estado.nome, c.id]} %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

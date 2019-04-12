@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_010849) do
+ActiveRecord::Schema.define(version: 2019_04_12_013321) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2019_04_12_010849) do
     t.string "numero"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "cidade_id"
+    t.index ["cidade_id"], name: "index_enderecos_on_cidade_id"
   end
 
   create_table "estados", force: :cascade do |t|
@@ -86,5 +88,6 @@ ActiveRecord::Schema.define(version: 2019_04_12_010849) do
   add_foreign_key "cidades", "estados"
   add_foreign_key "disciplinas", "cursos"
   add_foreign_key "disciplinas", "semestres", column: "semestre_id"
+  add_foreign_key "enderecos", "cidades"
   add_foreign_key "pessoas", "enderecos"
 end

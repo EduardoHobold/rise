@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cidades
   resources :estados
   resources :alunos
   resources :disciplinas

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_013321) do
+ActiveRecord::Schema.define(version: 2019_04_13_004238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,15 @@ ActiveRecord::Schema.define(version: 2019_04_12_013321) do
     t.index ["endereco_id"], name: "index_pessoas_on_endereco_id"
   end
 
+  create_table "professores", force: :cascade do |t|
+    t.bigint "pessoa_id"
+    t.bigint "disciplina_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["disciplina_id"], name: "index_professores_on_disciplina_id"
+    t.index ["pessoa_id"], name: "index_professores_on_pessoa_id"
+  end
+
   create_table "semestres", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
@@ -90,4 +99,6 @@ ActiveRecord::Schema.define(version: 2019_04_12_013321) do
   add_foreign_key "disciplinas", "semestres", column: "semestre_id"
   add_foreign_key "enderecos", "cidades"
   add_foreign_key "pessoas", "enderecos"
+  add_foreign_key "professores", "disciplinas"
+  add_foreign_key "professores", "pessoas"
 end

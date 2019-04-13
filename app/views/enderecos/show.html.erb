@@ -17,12 +17,7 @@
 
 <p>
   <strong>Cidade:</strong>
-  <%= @endereco.cidade %>
-</p>
-
-<p>
-  <strong>Estado:</strong>
-  <%= @endereco.estado %>
+  <%= @endereco.cidade.nome %>
 </p>
 
 <%= link_to 'Edit', edit_endereco_path(@endereco) %> |

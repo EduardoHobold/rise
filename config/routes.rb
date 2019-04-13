@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :trabalhos
   resources :provas
   resources :prova_livros
   resources :aluno_livros

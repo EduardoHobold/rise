@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_011607) do
+ActiveRecord::Schema.define(version: 2019_04_13_013613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -116,10 +116,30 @@ ActiveRecord::Schema.define(version: 2019_04_13_011607) do
     t.index ["livro_id"], name: "index_prova_livros_on_livro_id"
   end
 
+  create_table "provas", force: :cascade do |t|
+    t.bigint "aluno_id"
+    t.bigint "disciplina_id"
+    t.float "notag1"
+    t.float "notag2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["aluno_id"], name: "index_provas_on_aluno_id"
+    t.index ["disciplina_id"], name: "index_provas_on_disciplina_id"
+  end
+
   create_table "semestres", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "trabalhos", force: :cascade do |t|
+    t.bigint "disciplina_id"
+    t.date "dt_entrega"
+    t.string "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["disciplina_id"], name: "index_trabalhos_on_disciplina_id"
   end
 
   add_foreign_key "aluno_livros", "alunos"
@@ -134,4 +154,7 @@ ActiveRecord::Schema.define(version: 2019_04_13_011607) do
   add_foreign_key "professores", "pessoas"
   add_foreign_key "prova_livros", "alunos"
   add_foreign_key "prova_livros", "livros"
+  add_foreign_key "provas", "alunos"
+  add_foreign_key "provas", "disciplinas"
+  add_foreign_key "trabalhos", "disciplinas"
 end

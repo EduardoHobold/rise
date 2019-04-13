@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aluno: one
+  disciplina: one
+  notag1: 1.5
+  notag2: 1.5
+
+two:
+  aluno: two
+  disciplina: two
+  notag1: 1.5
+  notag2: 1.5

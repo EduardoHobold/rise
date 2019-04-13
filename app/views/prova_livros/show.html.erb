@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Livro:</strong>
+  <%= @prova_livro.livro %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @prova_livro.aluno %>
+</p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @prova_livro.nota %>
+</p>
+
+<%= link_to 'Edit', edit_prova_livro_path(@prova_livro) %> |
+<%= link_to 'Back', prova_livros_path %>

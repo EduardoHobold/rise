@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :prova_livros
   resources :aluno_livros
   resources :livros
   resources :professores

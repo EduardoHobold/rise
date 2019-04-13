@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  livro: one
+  aluno: one
+  nota: 1.5
+
+two:
+  livro: two
+  aluno: two
+  nota: 1.5

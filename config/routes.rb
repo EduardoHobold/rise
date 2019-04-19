@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :presenca_aulas
   resources :aulas
   resources :matriculas
   resources :nota_trabalhos

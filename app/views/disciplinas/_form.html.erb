@@ -28,12 +28,14 @@
 
   <div class="field">
     <%= form.label :semestre_id %>
-    <%= form.text_field :semestre_id %>
+    <%= form.select :semestre_id,
+    Semestre.all.collect {|c| [c.nome , c.id]} %>
   </div>
 
   <div class="field">
     <%= form.label :curso_id %>
-    <%= form.text_field :curso_id %>
+    <%= form.select :curso_id,
+    Curso.all.collect {|c| [c.nome , c.id]} %>
   </div>
 
   <div class="actions">

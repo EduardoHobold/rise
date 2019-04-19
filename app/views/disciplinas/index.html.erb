@@ -20,8 +20,8 @@
         <td><%= disciplina.nome %></td>
         <td><%= disciplina.carga_horaria %></td>
         <td><%= disciplina.conteudo %></td>
-        <td><%= disciplina.semestre %></td>
-        <td><%= disciplina.curso %></td>
+        <td><%= disciplina.semestre.nome %></td>
+        <td><%= disciplina.curso.nome %></td>
         <td><%= link_to 'Show', disciplina %></td>
         <td><%= link_to 'Edit', edit_disciplina_path(disciplina) %></td>
         <td><%= link_to 'Destroy', disciplina, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -13,12 +13,14 @@
 
   <div class="field">
     <%= form.label :pessoa_id %>
-    <%= form.text_field :pessoa_id %>
+    <%= form.select :pessoa_id,
+    Pessoa.all.collect {|c| [c.nome , c.id]} %>
   </div>
 
   <div class="field">
     <%= form.label :disciplina_id %>
-    <%= form.text_field :disciplina_id %>
+    <%= form.select :disciplina_id,
+    Disciplina.all.collect {|c| [c.nome, c.id]} %>
   </div>
 
   <div class="actions">

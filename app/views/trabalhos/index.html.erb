@@ -15,7 +15,7 @@
   <tbody>
     <% @trabalhos.each do |trabalho| %>
       <tr>
-        <td><%= trabalho.disciplina %></td>
+        <td><%= trabalho.disciplina.nome %></td>
         <td><%= trabalho.dt_entrega %></td>
         <td><%= trabalho.descricao %></td>
         <td><%= link_to 'Show', trabalho %></td>

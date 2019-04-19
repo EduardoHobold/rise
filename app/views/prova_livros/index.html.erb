@@ -15,8 +15,8 @@
   <tbody>
     <% @prova_livros.each do |prova_livro| %>
       <tr>
-        <td><%= prova_livro.livro %></td>
-        <td><%= prova_livro.aluno %></td>
+        <td><%= prova_livro.livro.nome %></td>
+        <td><%= prova_livro.aluno.pessoa.nome %></td>
         <td><%= prova_livro.nota %></td>
         <td><%= link_to 'Show', prova_livro %></td>
         <td><%= link_to 'Edit', edit_prova_livro_path(prova_livro) %></td>

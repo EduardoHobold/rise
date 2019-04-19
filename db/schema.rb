@@ -25,10 +25,11 @@ ActiveRecord::Schema.define(version: 2019_04_13_013955) do
   end
 
   create_table "alunos", force: :cascade do |t|
-    t.integer "ra"
     t.bigint "pessoa_id"
+    t.bigint "matricula_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["matricula_id"], name: "index_alunos_on_matricula_id"
     t.index ["pessoa_id"], name: "index_alunos_on_pessoa_id"
   end
 
@@ -82,6 +83,14 @@ ActiveRecord::Schema.define(version: 2019_04_13_013955) do
     t.string "sinopse"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "matriculas", force: :cascade do |t|
+    t.string "ra"
+    t.bigint "curso_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["curso_id"], name: "index_matriculas_on_curso_id"
   end
 
   create_table "nota_trabalhos", force: :cascade do |t|
@@ -155,11 +164,13 @@ ActiveRecord::Schema.define(version: 2019_04_13_013955) do
 
   add_foreign_key "aluno_livros", "alunos"
   add_foreign_key "aluno_livros", "livros"
+  add_foreign_key "alunos", "matriculas"
   add_foreign_key "alunos", "pessoas"
   add_foreign_key "cidades", "estados"
   add_foreign_key "disciplinas", "cursos"
   add_foreign_key "disciplinas", "semestres", column: "semestre_id"
   add_foreign_key "enderecos", "cidades"
+  add_foreign_key "matriculas", "cursos"
   add_foreign_key "nota_trabalhos", "alunos"
   add_foreign_key "nota_trabalhos", "trabalhos"
   add_foreign_key "pessoas", "enderecos"

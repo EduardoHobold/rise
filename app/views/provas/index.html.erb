@@ -9,6 +9,8 @@
       <th>Disciplina</th>
       <th>Notag1</th>
       <th>Notag2</th>
+      <th>Subg1</th>
+      <th>Subg2</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +18,12 @@
   <tbody>
     <% @provas.each do |prova| %>
       <tr>
-        <td><%= prova.aluno %></td>
-        <td><%= prova.disciplina %></td>
+        <td><%= prova.aluno.pessoa.nome %></td>
+        <td><%= prova.disciplina.nome %></td>
         <td><%= prova.notag1 %></td>
         <td><%= prova.notag2 %></td>
+        <td><%= prova.subg1 %></td>
+        <td><%= prova.subg2 %></td>
         <td><%= link_to 'Show', prova %></td>
         <td><%= link_to 'Edit', edit_prova_path(prova) %></td>
         <td><%= link_to 'Destroy', prova, method: :delete, data: { confirm: 'Are you sure?' } %></td>

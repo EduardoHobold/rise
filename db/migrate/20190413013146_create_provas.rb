@@ -5,6 +5,8 @@ class CreateProvas < ActiveRecord::Migration[5.2]
       t.belongs_to :disciplina, foreign_key: true
       t.float :notag1
       t.float :notag2
+      t.float :subg1
+      t.float :subg2
 
       t.timestamps
     end

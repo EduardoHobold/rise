@@ -160,6 +160,8 @@ ActiveRecord::Schema.define(version: 2019_04_19_181811) do
     t.bigint "disciplina_id"
     t.float "notag1"
     t.float "notag2"
+    t.float "subg1"
+    t.float "subg2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["aluno_id"], name: "index_provas_on_aluno_id"

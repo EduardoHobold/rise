@@ -13,12 +13,14 @@
 
   <div class="field">
     <%= form.label :aluno_id %>
-    <%= form.text_field :aluno_id %>
+    <%= form.select :aluno_id,
+    Aluno.all.collect {|c| [c.pessoa.nome , c.id]} %>
   </div>
 
   <div class="field">
     <%= form.label :disciplina_id %>
-    <%= form.text_field :disciplina_id %>
+    <%= form.select :disciplina_id,
+    Disciplina.all.collect {|c| [c.nome , c.id]} %>
   </div>
 
   <div class="field">
@@ -30,6 +32,17 @@
     <%= form.label :notag2 %>
     <%= form.text_field :notag2 %>
   </div>
+
+  <div class="field">
+    <%= form.label :subg1 %>
+    <%= form.text_field :subg1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subg2 %>
+    <%= form.text_field :subg2 %>
+  </div>
+  
 
   <div class="actions">
     <%= form.submit %>

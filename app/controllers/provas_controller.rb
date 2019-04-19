@@ -69,6 +69,6 @@ class ProvasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prova_params
-      params.require(:prova).permit(:aluno_id, :disciplina_id, :notag1, :notag2)
+      params.require(:prova).permit(:aluno_id, :disciplina_id, :notag1, :notag2, :subg1, :subg2)
     end
 end

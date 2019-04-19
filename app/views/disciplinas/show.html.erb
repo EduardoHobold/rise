@@ -17,12 +17,12 @@
 
 <p>
   <strong>Semestre:</strong>
-  <%= @disciplina.semestre %>
+  <%= @disciplina.semestre.nome %>
 </p>
 
 <p>
   <strong>Curso:</strong>
-  <%= @disciplina.curso %>
+  <%= @disciplina.curso.nome %>
 </p>
 
 <%= link_to 'Edit', edit_disciplina_path(@disciplina) %> |

@@ -2,12 +2,12 @@
 
 <p>
   <strong>Aluno:</strong>
-  <%= @prova.aluno %>
+  <%= @prova.aluno.pessoa.nome %>
 </p>
 
 <p>
   <strong>Disciplina:</strong>
-  <%= @prova.disciplina %>
+  <%= @prova.disciplina.nome %>
 </p>
 
 <p>
@@ -18,6 +18,16 @@
 <p>
   <strong>Notag2:</strong>
   <%= @prova.notag2 %>
+</p>
+
+<p>
+  <strong>Subg1:</strong>
+  <%= @prova.subg1 %>
+</p>
+
+<p>
+  <strong>Subg2:</strong>
+  <%= @prova.subg2 %>
 </p>
 
 <%= link_to 'Edit', edit_prova_path(@prova) %> |

@@ -32,7 +32,7 @@
 
 <p>
   <strong>Endereco:</strong>
-  <%= @pessoa.endereco %>
+  <%= @pessoa.endereco.cidade.nome %>
 </p>
 
 <%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |

@@ -69,6 +69,6 @@ class SemestresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def semestr_params
-      params.require(:semestr).permit(:nome)
+      params.require(:semestre).permit(:nome)
     end
 end

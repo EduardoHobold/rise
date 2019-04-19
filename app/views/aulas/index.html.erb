@@ -16,7 +16,7 @@
   <tbody>
     <% @aulas.each do |aula| %>
       <tr>
-        <td><%= aula.disciplina %></td>
+        <td><%= aula.disciplina.nome %></td>
         <td><%= aula.data %></td>
         <td><%= aula.objetivo %></td>
         <td><%= aula.realizado %></td>

@@ -2,12 +2,12 @@
 
 <p>
   <strong>Pessoa:</strong>
-  <%= @professor.pessoa %>
+  <%= @professor.pessoa.nome %>
 </p>
 
 <p>
   <strong>Disciplina:</strong>
-  <%= @professor.disciplina %>
+  <%= @professor.disciplina.nome %>
 </p>
 
 <%= link_to 'Edit', edit_professor_path(@professor) %> |

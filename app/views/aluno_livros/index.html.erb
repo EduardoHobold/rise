@@ -14,8 +14,8 @@
   <tbody>
     <% @aluno_livros.each do |aluno_livro| %>
       <tr>
-        <td><%= aluno_livro.aluno %></td>
-        <td><%= aluno_livro.livro %></td>
+        <td><%= aluno_livro.aluno.pessoa.nome %></td>
+        <td><%= aluno_livro.livro.nome %></td>
         <td><%= link_to 'Show', aluno_livro %></td>
         <td><%= link_to 'Edit', edit_aluno_livro_path(aluno_livro) %></td>
         <td><%= link_to 'Destroy', aluno_livro, method: :delete, data: { confirm: 'Are you sure?' } %></td>

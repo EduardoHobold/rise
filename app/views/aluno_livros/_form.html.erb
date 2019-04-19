@@ -11,15 +11,20 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= form.label :aluno_id %>
-    <%= form.text_field :aluno_id %>
+    <%= form.select :aluno_id,
+    Aluno.all.collect {|c| [c.pessoa.nome , c.id]} %>
   </div>
 
   <div class="field">
     <%= form.label :livro_id %>
-    <%= form.text_field :livro_id %>
+    <%= form.select :livro_id,
+    Livro.all.collect {|c| [c.nome , c.id]} %>
   </div>
+
+  
 
   <div class="actions">
     <%= form.submit %>

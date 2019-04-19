@@ -2,12 +2,12 @@
 
 <p>
   <strong>Aluno:</strong>
-  <%= @aluno_livro.aluno %>
+  <%= @aluno_livro.aluno.pessoa.nome %>
 </p>
 
 <p>
   <strong>Livro:</strong>
-  <%= @aluno_livro.livro %>
+  <%= @aluno_livro.livro.nome %>
 </p>
 
 <%= link_to 'Edit', edit_aluno_livro_path(@aluno_livro) %> |

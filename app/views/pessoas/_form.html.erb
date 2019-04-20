@@ -44,7 +44,7 @@
   <div class="field">
     <%= form.label :endereco_id %>
     <%= form.select :endereco_id,
-    Endereco.all.collect {|c| [c.rua, c.id]} %>
+    Endereco.all.collect {|c| [c.rua + " - " + c.numero, c.id]} %>
   </div>
 
   <div class="actions">

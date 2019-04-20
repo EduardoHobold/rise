@@ -69,6 +69,6 @@ class NotaTrabalhosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def nota_trabalho_params
-      params.require(:nota_trabalho).permit(:aluno_id, :trabalho_id, :notag1, :notag2)
+      params.require(:nota_trabalho).permit(:aluno_id, :trabalho_id, :nota)
     end
 end

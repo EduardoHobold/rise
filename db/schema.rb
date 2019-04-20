@@ -106,8 +106,7 @@ ActiveRecord::Schema.define(version: 2019_04_19_181811) do
   create_table "nota_trabalhos", force: :cascade do |t|
     t.bigint "aluno_id"
     t.bigint "trabalho_id"
-    t.float "notag1"
-    t.float "notag2"
+    t.float "nota"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["aluno_id"], name: "index_nota_trabalhos_on_aluno_id"

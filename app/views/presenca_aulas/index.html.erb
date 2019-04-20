@@ -14,8 +14,8 @@
   <tbody>
     <% @presenca_aulas.each do |presenca_aula| %>
       <tr>
-        <td><%= presenca_aula.aula %></td>
-        <td><%= presenca_aula.aluno %></td>
+        <td><%= presenca_aula.aula.disciplina.nome %></td>
+        <td><%= presenca_aula.aluno.pessoa.nome %></td>
         <td><%= link_to 'Show', presenca_aula %></td>
         <td><%= link_to 'Edit', edit_presenca_aula_path(presenca_aula) %></td>
         <td><%= link_to 'Destroy', presenca_aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>

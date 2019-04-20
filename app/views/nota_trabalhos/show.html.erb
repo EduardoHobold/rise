@@ -2,12 +2,12 @@
 
 <p>
   <strong>Aluno:</strong>
-  <%= @nota_trabalho.aluno %>
+  <%= @nota_trabalho.aluno.pessoa.nome %>
 </p>
 
 <p>
   <strong>Trabalho:</strong>
-  <%= @nota_trabalho.trabalho %>
+  <%= @nota_trabalho.trabalho.disciplina.nome %>
 </p>
 
 <p>

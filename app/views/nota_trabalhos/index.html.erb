@@ -15,8 +15,8 @@
   <tbody>
     <% @nota_trabalhos.each do |nota_trabalho| %>
       <tr>
-        <td><%= nota_trabalho.aluno %></td>
-        <td><%= nota_trabalho.trabalho %></td>
+        <td><%= nota_trabalho.aluno.pessoa.nome %></td>
+        <td><%= nota_trabalho.trabalho.disciplina.nome %></td>
         <td><%= nota_trabalho.nota %></td>
         <td><%= link_to 'Show', nota_trabalho %></td>
         <td><%= link_to 'Edit', edit_nota_trabalho_path(nota_trabalho) %></td>

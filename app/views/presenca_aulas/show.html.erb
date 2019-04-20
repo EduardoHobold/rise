@@ -2,12 +2,12 @@
 
 <p>
   <strong>Aula:</strong>
-  <%= @presenca_aula.aula %>
+  <%= @presenca_aula.aula.disciplina.nome %>
 </p>
 
 <p>
   <strong>Aluno:</strong>
-  <%= @presenca_aula.aluno %>
+  <%= @presenca_aula.aluno.pessoa.nome %>
 </p>
 
 <%= link_to 'Edit', edit_presenca_aula_path(@presenca_aula) %> |
